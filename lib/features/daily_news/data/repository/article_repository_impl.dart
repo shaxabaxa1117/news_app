@@ -14,7 +14,7 @@ final NewsApiService _newsApiService;
 
 ArticleRepositoryImpl(this._newsApiService);
 
-  @override
+  @override //! implemetation
   Future<DataState<List<ArticleModel>>> getNewsArticles() async{
 
 try{
@@ -25,6 +25,7 @@ try{
    );
 
    if(httpResponse.response.statusCode == HttpStatus.ok){
+    
     return DataSuccess(httpResponse.data);
 
     

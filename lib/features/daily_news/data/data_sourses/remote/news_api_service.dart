@@ -21,6 +21,5 @@ Future<HttpResponse<List<ArticleModel>>> getNewsArticles( {
   @Query('category') String? category, //! parameters
 });
 
-
  //! this is going to be implemented by the retrofin generator
 }
