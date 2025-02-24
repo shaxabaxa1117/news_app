@@ -22,6 +22,10 @@ class RemoteArticleBloc extends Bloc<RemoteArticleEvent, RemoteArticleState> {
       emit(RemoteArticlesDone( dataState.data!));
   }
   if (dataState is DataFailed) {
+
+
+    print(dataState.error!.message);
+
     emit(RemoteArticlesError(dataState.error!));
     
   }

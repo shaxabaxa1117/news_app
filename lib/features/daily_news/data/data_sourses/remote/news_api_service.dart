@@ -16,9 +16,10 @@ factory NewsApiService(Dio dio, {String baseUrl}) = _NewsApiService;
 
  @GET('/top-headlines')
 Future<HttpResponse<List<ArticleModel>>> getNewsArticles( {
-  @Query('apiKey') String? apiKey,
+ 
   @Query('country') String? country,
-  @Query('category') String? category, //! parameters
+  @Query('category') String? category,
+  @Query('apiKey') String? apiKey, //! parameters
 });
 
  //! this is going to be implemented by the retrofin generator
